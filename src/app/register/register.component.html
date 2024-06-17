@@ -27,8 +27,10 @@
                 <p class="error-message">Confirm Password is required.</p>
             </div>
 
-            <p class="error-message" *ngIf="confirmPassword.touched && password.value !== confirmPassword.value">
-                Passwords do not match.</p>
+            <div *ngIf="confirmPassword.touched && password.value !== confirmPassword.value">
+                <p class="error-message">Passwords do not match.</p>
+            </div>
+
         </div>
         <button type="submit" [disabled]="registerForm.invalid">Register</button>
     </form>

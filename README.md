@@ -1,27 +1,31 @@
 # LoginAndRegistration
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13. 
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Current behavior:
 
-## Build
+1. Login: A click on the Login Button throws an error "the user does not exist."
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Registration: A click on the Register link in the top right corner of the Login page launches the Registration page. But no action is performed when the Register button is clicked.
 
-## Running unit tests
+## Expected behavior:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. When the Login button is clicked on the Login page, the user should experience the following based on the correct user credentials entered on the login page.
 
-## Running end-to-end tests
+    a. If correct, the user should be taken to the "Home page."
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    b. If incorrect, then it should throw an error message "the user does not exist."
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. On the Registration page, when the Register button is clicked, all fields should be appropriately validated, as explained below. The user should be redirected to the "Login Page" only if it passes all the validations.
+
+    a. The email should be in a valid format.
+
+    b. Password and Repeat Password should match.
+
+    c. No fields should be empty.
