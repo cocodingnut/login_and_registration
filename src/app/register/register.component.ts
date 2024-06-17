@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   constructor(private router: Router) { }
   register(form: any): void {
-    if (form.valid) {
-      const email = form.value.userEmail;
-      const password = form.value.password;
+    const email = form.value.userEmail;
+    const password = form.value.password;
+    const confirmPassword = form.value.confirmPassword;
+
+    if (form.valid && password == confirmPassword) {
 
       // Create a new user object
       const newUser = { userEmail: email, password: password };
